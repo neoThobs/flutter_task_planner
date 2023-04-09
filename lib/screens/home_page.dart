@@ -113,7 +113,9 @@ class HomePage extends StatelessWidget {
                     Container(
                       color: Colors.transparent,
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 20.0, vertical: 10.0),
+                        horizontal: 20.0,
+                        vertical: 10.0,
+                      ),
                       child: Column(
                         children: <Widget>[
                           Row(
@@ -126,8 +128,8 @@ class HomePage extends StatelessWidget {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) =>
-                                            const CalendarPage()),
+                                      builder: (context) => CalendarPage(),
+                                    ),
                                   );
                                 },
                                 child: calendarIcon(),
