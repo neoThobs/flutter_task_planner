@@ -41,7 +41,7 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             TopContainer(
-              height: 200,
+              height: 250,
               width: width,
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -80,27 +80,23 @@ class HomePage extends StatelessWidget {
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Container(
-                                child: const Text(
-                                  'Sourav Suman',
-                                  textAlign: TextAlign.start,
-                                  style: TextStyle(
-                                    fontSize: 22.0,
-                                    color: LightColors.kDarkBlue,
-                                    fontWeight: FontWeight.w800,
-                                  ),
+                            children: const <Widget>[
+                              Text(
+                                'Sourav Suman',
+                                textAlign: TextAlign.start,
+                                style: TextStyle(
+                                  fontSize: 22.0,
+                                  color: LightColors.kDarkBlue,
+                                  fontWeight: FontWeight.w800,
                                 ),
                               ),
-                              Container(
-                                child: const Text(
-                                  'App Developer',
-                                  textAlign: TextAlign.start,
-                                  style: TextStyle(
-                                    fontSize: 16.0,
-                                    color: Colors.black45,
-                                    fontWeight: FontWeight.w400,
-                                  ),
+                              Text(
+                                'App Developer',
+                                textAlign: TextAlign.start,
+                                style: TextStyle(
+                                  fontSize: 16.0,
+                                  color: Colors.black45,
+                                  fontWeight: FontWeight.w400,
                                 ),
                               ),
                             ],
