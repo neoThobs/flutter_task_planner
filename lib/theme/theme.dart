@@ -25,3 +25,35 @@ ThemeData getAppTheme(BuildContext context, bool isDarkTheme) {
             IconThemeData(color: isDarkTheme ? Colors.white : Colors.black54)),
   );
 }
+
+CustomTheme currentTheme = CustomTheme();
+
+class CustomTheme with ChangeNotifier {
+  static bool _isDarkTheme = true;
+  ThemeMode get currentTheme => _isDarkTheme ? ThemeMode.dark : ThemeMode.light;
+
+  void toggleTheme() {
+    _isDarkTheme = !_isDarkTheme;
+    notifyListeners();
+  }
+
+  static ThemeData get lightTheme {
+    return ThemeData(
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+        ),
+      ),
+    );
+  }
+
+  static ThemeData get darkTheme {
+    return ThemeData(
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all<Color>(Colors.yellow),
+        ),
+      ),
+    );
+  }
+}
