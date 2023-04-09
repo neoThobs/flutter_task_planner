@@ -40,8 +40,7 @@ class CreateNewTaskPage extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 20),
-                  Container(
-                      child: Column(
+                  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       const MyTextField(
@@ -62,7 +61,7 @@ class CreateNewTaskPage extends StatelessWidget {
                         ],
                       )
                     ],
-                  ))
+                  ),
                 ],
               ),
             ),
