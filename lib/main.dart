@@ -33,18 +33,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
-// class MyApp extends StatelessWidget {
-//   const MyApp({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'Task Planner',
-//       theme: ThemeData(
-//         primarySwatch: Colors.blue,
-//       ),
-//       home: const HomePage(),
-//     );
-//   }
-// }
