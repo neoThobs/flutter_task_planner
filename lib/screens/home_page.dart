@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_task_planner/screens/calendar_page.dart';
 import 'package:flutter_task_planner/theme/colors/light_colors.dart';
+import 'package:flutter_task_planner/theme/theme.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:flutter_task_planner/widgets/task_column.dart';
 import 'package:flutter_task_planner/widgets/active_project_card.dart';
@@ -36,7 +37,6 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: LightColors.kLightYellow,
       body: SafeArea(
         child: Column(
           children: <Widget>[
@@ -48,10 +48,15 @@ class HomePage extends StatelessWidget {
                   children: <Widget>[
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const <Widget>[
-                        Icon(Icons.menu,
-                            color: LightColors.kDarkBlue, size: 30.0),
-                        Icon(Icons.search,
+                      children: <Widget>[
+                        ElevatedButton(
+                          onPressed: () {
+                            currentTheme.toggleTheme();
+                          },
+                          child: const Icon(Icons.menu,
+                              color: LightColors.kDarkBlue, size: 30.0),
+                        ),
+                        const Icon(Icons.search,
                             color: LightColors.kDarkBlue, size: 25.0),
                       ],
                     ),
@@ -128,7 +133,8 @@ class HomePage extends StatelessWidget {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => CalendarPage(),
+                                      builder: (context) =>
+                                          const CalendarPage(),
                                     ),
                                   );
                                 },
