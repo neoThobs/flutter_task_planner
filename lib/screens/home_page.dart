@@ -87,7 +87,7 @@ class HomePage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: const <Widget>[
                               Text(
-                                'Sourav Suman',
+                                'Developer 1',
                                 textAlign: TextAlign.start,
                                 style: TextStyle(
                                   fontSize: 22.0,
